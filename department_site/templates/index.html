@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Department Portal</title></head>
+<body>
+  <h2>Add Department</h2>
+  <form method="POST">
+    Dept ID: <input name="dept_id" required><br>
+    Dept Name: <input name="dept_name" required><br>
+    HOD: <input name="hod" required><br>
+    HOD Email: <input name="hod_email" type="email" required><br>
+    <button type="submit">Add Department</button>
+  </form>
+  <h2>Departments</h2>
+  <table border="1">
+    <tr><th>Dept ID</th><th>Dept Name</th><th>HOD</th><th>HOD Email</th></tr>
+    {% for r in rows %}
+    <tr><td>{{ r[0] }}</td><td>{{ r[1] }}</td><td>{{ r[2] }}</td><td>{{ r[3] }}</td></tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
